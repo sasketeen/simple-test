@@ -1,21 +1,12 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") apply false
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+    group = "org.example"
+    version = "0.0.1-SNAPSHOT"
 }
