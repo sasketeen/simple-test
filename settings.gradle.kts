@@ -5,3 +5,4 @@ plugins {
 rootProject.name = "simple-test"
 
 includeBuild("lessons")
+includeBuild("project")

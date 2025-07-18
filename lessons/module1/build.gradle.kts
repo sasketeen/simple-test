@@ -10,5 +10,5 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(libs.versions.jdk.get().toInt())
+    jvmToolchain(libs.versions.jvm.language.get().toInt())
 }
