@@ -1,10 +1,11 @@
 plugins {
-    kotlin("jvm") apply false
+    alias(libs.plugins.jvm) apply false
 }
 
 allprojects {
     repositories {
         mavenCentral()
+        gradlePluginPortal()
     }
 
     group = "org.example"

@@ -1,13 +1,14 @@
-pluginManagement {
-    plugins {
-        val kotlinVersion: String by settings
-        kotlin("jvm") version kotlinVersion
+rootProject.name = "lessons"
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
     }
 }
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-
-rootProject.name = "lessons"
 
 include("module1")
