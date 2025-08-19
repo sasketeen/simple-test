@@ -48,7 +48,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 8.10.1
-          arguments: check -i
+          arguments: :lessons:module1:check -i
 
       - name: Save Primes
         id: cache-primes-save
